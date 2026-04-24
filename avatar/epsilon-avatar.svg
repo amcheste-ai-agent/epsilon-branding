@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Epsilon — AI coding agent avatar">
+  <title>Epsilon</title>
+  <defs>
+    
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2A3040"></stop>
+      <stop offset="60%" stop-color="#1E2230"></stop>
+      <stop offset="100%" stop-color="#161A26"></stop>
+    </radialGradient>
+
+    
+    <linearGradient id="body" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#5A5F6E"></stop>
+      <stop offset="45%" stop-color="#4A4F5C"></stop>
+      <stop offset="100%" stop-color="#353945"></stop>
+    </linearGradient>
+
+    
+    <linearGradient id="bevel" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"></stop>
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.04"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.22"></stop>
+    </linearGradient>
+
+    
+    <linearGradient id="forehead" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#52576A"></stop>
+      <stop offset="100%" stop-color="#3E4350"></stop>
+    </linearGradient>
+
+    
+    <radialGradient id="socket" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#1C1F28"></stop>
+      <stop offset="100%" stop-color="#0E1018"></stop>
+    </radialGradient>
+
+    
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE29A"></stop>
+      <stop offset="35%" stop-color="#F5B84A"></stop>
+      <stop offset="85%" stop-color="#C7841F"></stop>
+      <stop offset="100%" stop-color="#7A4E10"></stop>
+    </radialGradient>
+
+    
+    <linearGradient id="brass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F4D27A"></stop>
+      <stop offset="50%" stop-color="#C99A45"></stop>
+      <stop offset="100%" stop-color="#8E6523"></stop>
+    </linearGradient>
+
+    
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"></stop>
+    </radialGradient>
+
+    
+    <filter id="eyeBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+
+    
+    <clipPath id="headClip">
+      <rect x="112" y="128" width="288" height="256" rx="56" ry="56"></rect>
+    </clipPath>
+  </defs>
+
+  
+  <rect width="512" height="512" fill="url(#bg)"></rect>
+
+  
+  <ellipse cx="256" cy="432" rx="150" ry="18" fill="url(#shadow)"></ellipse>
+
+  
+  <g>
+    <rect x="96" y="232" width="24" height="64" rx="10" fill="#3A3E4A"></rect>
+    <rect x="96" y="232" width="24" height="64" rx="10" fill="url(#bevel)"></rect>
+    <rect x="392" y="232" width="24" height="64" rx="10" fill="#3A3E4A"></rect>
+    <rect x="392" y="232" width="24" height="64" rx="10" fill="url(#bevel)"></rect>
+  </g>
+
+  
+  <g>
+    
+    <rect x="112" y="128" width="288" height="256" rx="56" ry="56" fill="url(#body)"></rect>
+    
+    <rect x="112" y="128" width="288" height="256" rx="56" ry="56" fill="#000" filter="url(#grain)" opacity="0.35"></rect>
+    
+    <rect x="112" y="128" width="288" height="256" rx="56" ry="56" fill="url(#bevel)"></rect>
+
+    
+    <g clip-path="url(#headClip)">
+      <rect x="152" y="148" width="208" height="72" rx="22" fill="url(#forehead)"></rect>
+      
+      <rect x="152" y="148" width="208" height="72" rx="22" fill="none" stroke="#2B2F3A" stroke-width="1.25" opacity="0.9"></rect>
+      <rect x="153.5" y="149.5" width="205" height="69" rx="20.5" fill="none" stroke="#ffffff" stroke-width="0.75" opacity="0.12"></rect>
+    </g>
+
+    
+    <g transform="translate(256 184)">
+      
+      <circle r="30" fill="#F5B84A" opacity="0.10"></circle>
+      
+      <g transform="translate(0 1)">
+        <path d="&#xA;          M 14 -16&#xA;          C 6 -20, -6 -20, -12 -14&#xA;          C -18 -8, -18 -2, -12 2&#xA;          C -8 5, -2 5, 2 5&#xA;          L -2 5&#xA;          C -8 5, -18 9, -18 16&#xA;          C -18 24, -6 28, 6 26&#xA;          C 11 25, 14 23, 16 21&#xA;        " fill="none" stroke="url(#brass)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        
+        <path d="&#xA;          M 14 -16&#xA;          C 6 -20, -6 -20, -12 -14&#xA;        " fill="none" stroke="#FFF2C8" stroke-width="1.25" stroke-linecap="round" opacity="0.85"></path>
+      </g>
+    </g>
+
+    
+    <g>
+      
+      <circle cx="196" cy="288" r="44" fill="url(#socket)"></circle>
+      <circle cx="196" cy="288" r="44" fill="none" stroke="#000" stroke-width="1" opacity="0.6"></circle>
+      
+      <circle cx="316" cy="288" r="44" fill="url(#socket)"></circle>
+      <circle cx="316" cy="288" r="44" fill="none" stroke="#000" stroke-width="1" opacity="0.6"></circle>
+
+      
+      <g filter="url(#eyeBloom)">
+        <circle cx="196" cy="288" r="28" fill="url(#eyeGlow)"></circle>
+      </g>
+      
+      <g filter="url(#eyeBloom)">
+        <circle cx="316" cy="288" r="28" fill="url(#eyeGlow)"></circle>
+      </g>
+
+      
+      <circle cx="188" cy="280" r="7" fill="#FFFDF0" opacity="0.95"></circle>
+      <circle cx="308" cy="280" r="7" fill="#FFFDF0" opacity="0.95"></circle>
+      <circle cx="204" cy="296" r="2.5" fill="#FFFDF0" opacity="0.6"></circle>
+      <circle cx="324" cy="296" r="2.5" fill="#FFFDF0" opacity="0.6"></circle>
+    </g>
+
+    
+    <path d="M 228 346 Q 256 356 284 346" fill="none" stroke="#2B2F3A" stroke-width="3" stroke-linecap="round" opacity="0.55"></path>
+
+    
+    <path d="M 144 368 Q 256 384 368 368" fill="none" stroke="#4B9CD3" stroke-width="2" stroke-linecap="round" opacity="0.45"></path>
+  </g>
+
+  
+  <g>
+    
+    <rect x="232" y="384" width="48" height="24" rx="6" fill="#2F333E"></rect>
+    <rect x="232" y="384" width="48" height="24" rx="6" fill="url(#bevel)" opacity="0.6"></rect>
+    
+    <rect x="176" y="408" width="160" height="40" rx="14" fill="url(#body)"></rect>
+    <rect x="176" y="408" width="160" height="40" rx="14" fill="url(#bevel)"></rect>
+    
+    <g transform="translate(204 426)" opacity="0.9">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#C9CED8" stroke-width="1.5" stroke-linecap="round"></line>
+      <path d="M 0 -8 L 8 -5 L 0 -2 Z" fill="#4B9CD3"></path>
+    </g>
+    
+    <circle cx="308" cy="428" r="2.5" fill="url(#brass)" opacity="0.9"></circle>
+  </g>
+</svg>

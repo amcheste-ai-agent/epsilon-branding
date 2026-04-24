@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Epsilon — CLI Banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0E17; font-family: "JetBrains Mono", monospace; }
+  .term {
+    width: 960px;
+    height: 560px;
+    background: #0E1117;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+  }
+  .term-chrome {
+    height: 36px;
+    background: #1A1F2B;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    border-bottom: 1px solid #272D3C;
+  }
+  .term-chrome .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .term-chrome .dot.r { background: #FF5F56; }
+  .term-chrome .dot.y { background: #FFBD2E; }
+  .term-chrome .dot.g { background: #27C93F; }
+  .term-chrome .title {
+    flex: 1;
+    text-align: center;
+    color: #6B7184;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .term-body {
+    flex: 1;
+    padding: 24px 28px;
+    color: #C9CED8;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre;
+    overflow: hidden;
+  }
+  .term-body .amber { color: #F5B84A; }
+  .term-body .brass { color: #C99A45; }
+  .term-body .dim { color: #6B7184; }
+  .term-body .ink { color: #F0F2F8; }
+  .term-body .car { color: #4B9CD3; }
+  .term-body .ok { color: #3FB950; }
+  .term-body .prompt { color: #F5B84A; }
+  .term-body .pipe { color: #3A3F50; }
+
+  .ascii {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.05;
+    color: #F5B84A;
+    text-shadow: 0 0 18px rgba(245,184,74,0.25);
+    letter-spacing: 0;
+  }
+
+  .caret {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #F5B84A;
+    vertical-align: -2px;
+    animation: blink 1s steps(2) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+</style>
+</head>
+<body>
+  <div class="term">
+    <div class="term-chrome">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <div class="title">epsilon — zsh — 96×24</div>
+    </div>
+<div class="term-body"><span class="dim">$ epsilon --hello</span>
+
+<span class="ascii">    ███████╗██████╗ ███████╗██╗██╗      ██████╗ ███╗   ██╗
+    ██╔════╝██╔══██╗██╔════╝██║██║     ██╔═══██╗████╗  ██║
+    █████╗  ██████╔╝███████╗██║██║     ██║   ██║██╔██╗ ██║
+    ██╔══╝  ██╔═══╝ ╚════██║██║██║     ██║   ██║██║╚██╗██║
+    ███████╗██║     ███████║██║███████╗╚██████╔╝██║ ╚████║
+    ╚══════╝╚═╝     ╚══════╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝</span>
+
+       <span class="brass">ε</span>  <span class="ink">small, but essential.</span>
+          <span class="dim">for every ε &gt; 0, there is a δ &gt; 0 …</span>
+
+<span class="pipe">  ──────────────────────────────────────────────────────────────</span>
+   <span class="dim">identity  </span> <span class="ink">Epsilon</span> <span class="dim">&lt;</span><span class="amber">amcheste-ai-agent</span><span class="dim">&gt;</span>
+   <span class="dim">model     </span> <span class="ink">claude-sonnet-4-5</span>  <span class="ok">● ready</span>
+   <span class="dim">app id    </span> <span class="car">12345678</span>   <span class="dim">token ttl  </span><span class="ink">9m 42s</span>
+   <span class="dim">reviewer  </span> <span class="ink">@amcheste</span>  <span class="dim">· CODEOWNERS</span>
+<span class="pipe">  ──────────────────────────────────────────────────────────────</span>
+
+   <span class="dim">I open pull requests. I don't merge them.</span>
+   <span class="dim">Type </span><span class="amber">`epsilon help`</span><span class="dim"> for what I can do.</span>
+
+<span class="prompt">ε</span> <span class="ink">$</span> <span class="caret"></span></div>
+  </div>
+</body>
+</html>
