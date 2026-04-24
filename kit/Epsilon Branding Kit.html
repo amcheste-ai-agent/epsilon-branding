@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1440"/>
+<title>Epsilon — Branding Kit for amcheste-ai-agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Epsilon palette */
+    --slate-900: #161A26;
+    --slate-800: #1E2230;
+    --slate-700: #242938;
+    --slate-600: #2E3446;
+    --ink: #E6E8EE;
+    --ink-dim: #9AA0B0;
+    --ink-faint: #6B7184;
+    --amber: #F5B84A;
+    --amber-soft: #FFE29A;
+    --amber-deep: #C7841F;
+    --brass: #C99A45;
+    --brass-hi: #F4D27A;
+    --carolina: #4B9CD3;
+    --line: #2B3042;
+
+    /* GitHub-native tones for the mockup */
+    --gh-canvas: #0D1117;
+    --gh-canvas-2: #010409;
+    --gh-border: #30363D;
+    --gh-border-muted: #21262D;
+    --gh-text: #E6EDF3;
+    --gh-text-muted: #8D96A0;
+    --gh-accent: #2F81F7;
+    --gh-green: #238636;
+    --gh-green-2: #2EA043;
+    --gh-merged: #8957E5;
+    --gh-open: #3FB950;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0B0E17; color: var(--ink); font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  /* -------------------------------------------------------- *
+   * Page scaffolding                                          *
+   * -------------------------------------------------------- */
+  .page { max-width: 1360px; margin: 0 auto; padding: 64px 48px 120px; }
+
+  .kit-header {
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 56px;
+  }
+  .kit-header .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .kit-header h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 56px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0 0 10px;
+  }
+  .kit-header h1 .eps { color: var(--amber); font-style: italic; }
+  .kit-header p {
+    color: var(--ink-dim);
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 54ch;
+    margin: 0;
+  }
+  .kit-header .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-align: right;
+    line-height: 1.8;
+  }
+  .kit-header .meta b { color: var(--ink-dim); font-weight: 500; }
+
+  section { margin-bottom: 80px; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .section-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .card {
+    background: var(--slate-800);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .card .sub {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-bottom: 20px;
+  }
+
+  /* -------------------------------------------------------- *
+   * Avatar size showcase                                      *
+   * -------------------------------------------------------- */
+  .sizes {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+  }
+  .hero-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    min-height: 480px;
+    background: radial-gradient(ellipse at center, #232838 0%, #161A26 70%);
+  }
+  .hero-avatar img { width: 360px; height: 360px; border-radius: 50%; }
+
+  .size-stack { display: flex; flex-direction: column; gap: 16px; }
+  .size-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 20px 24px;
+    background: var(--slate-800);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .size-row .avs { display: flex; align-items: center; gap: 16px; justify-content: flex-start; }
+  .size-row .avs img { border-radius: 50%; display: block; }
+  .size-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+  .size-label b { display: block; color: var(--ink); font-weight: 500; font-size: 13px; letter-spacing: 0; font-family: "Inter", sans-serif; margin-bottom: 2px; }
+
+  /* Small size swatches grid */
+  .size-row .px {
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+  }
+  .size-row .px figure { margin: 0; text-align: center; }
+  .size-row .px figcaption {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    margin-top: 6px;
+  }
+
+  /* -------------------------------------------------------- *
+   * GitHub profile mockup                                     *
+   * -------------------------------------------------------- */
+  .gh-frame {
+    background: var(--gh-canvas);
+    border: 1px solid var(--gh-border);
+    border-radius: 14px;
+    overflow: hidden;
+    color: var(--gh-text);
+    font-size: 14px;
+  }
+  .gh-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    background: var(--gh-canvas-2);
+    border-bottom: 1px solid var(--gh-border);
+  }
+  .gh-nav .logo { width: 32px; height: 32px; color: var(--gh-text); }
+  .gh-nav .search {
+    flex: 1;
+    max-width: 320px;
+    background: var(--gh-canvas);
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: var(--gh-text-muted);
+  }
+  .gh-nav .tabs { display: flex; gap: 16px; font-size: 14px; font-weight: 500; margin-left: auto; color: var(--gh-text); }
+  .gh-nav .tabs span { opacity: 0.85; }
+
+  .gh-profile {
+    display: grid;
+    grid-template-columns: 296px 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .gh-sidebar .ava-wrap {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--gh-border);
+  }
+  .gh-sidebar .ava-wrap img { width: 100%; height: 100%; display: block; }
+  .gh-sidebar h2 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 16px 0 2px;
+    font-weight: 600;
+  }
+  .gh-sidebar .handle {
+    color: var(--gh-text-muted);
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 14px;
+  }
+  .gh-sidebar .bio {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gh-text);
+    margin-bottom: 16px;
+  }
+  .gh-btn {
+    display: block;
+    width: 100%;
+    padding: 5px 16px;
+    background: #21262D;
+    border: 1px solid rgba(240,246,252,0.1);
+    border-radius: 6px;
+    color: var(--gh-text);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .gh-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--gh-text-muted);
+  }
+  .gh-meta li { display: flex; align-items: center; gap: 8px; }
+  .gh-meta svg { width: 16px; height: 16px; flex: 0 0 16px; fill: var(--gh-text-muted); }
+  .gh-meta a { color: var(--gh-text); text-decoration: none; }
+  .gh-meta a:hover { color: var(--gh-accent); }
+
+  .gh-main .gh-tabs {
+    display: flex;
+    gap: 16px;
+    border-bottom: 1px solid var(--gh-border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  .gh-main .gh-tabs span { padding: 6px 10px; color: var(--gh-text-muted); }
+  .gh-main .gh-tabs span.active {
+    color: var(--gh-text);
+    border-bottom: 2px solid #F78166;
+    font-weight: 600;
+    border-radius: 0;
+  }
+
+  .readme-card {
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--gh-canvas);
+  }
+  .readme-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gh-border);
+    font-size: 13px;
+    color: var(--gh-text-muted);
+  }
+  .readme-head b { color: var(--gh-text); font-weight: 500; }
+
+  .readme-body { padding: 0; }
+
+  /* Epsilon README banner */
+  .eps-banner {
+    position: relative;
+    padding: 40px 40px 36px;
+    background: linear-gradient(135deg, #1C2030 0%, #161A26 55%, #242938 100%);
+    border-bottom: 1px solid var(--gh-border);
+    overflow: hidden;
+  }
+  .eps-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 85% 30%, rgba(245,184,74,0.10) 0%, transparent 40%),
+      radial-gradient(circle at 15% 90%, rgba(75,156,211,0.08) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .eps-banner-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  .eps-banner img { width: 120px; height: 120px; border-radius: 50%; }
+  .eps-banner h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    margin: 0 0 8px;
+    color: #F0F2F8;
+  }
+  .eps-banner h1 .eps { color: var(--amber); font-style: italic; }
+  .eps-banner .tagline {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--amber);
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .eps-banner .sub {
+    color: #C9CED8;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 60ch;
+    margin: 0;
+  }
+
+  .readme-content { padding: 24px 28px 28px; }
+  .readme-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--gh-border-muted);
+  }
+  .readme-content h3:first-child { margin-top: 0; }
+  .readme-content p { color: var(--gh-text); line-height: 1.6; margin: 0 0 12px; }
+  .readme-content ul { margin: 0 0 12px; padding-left: 22px; }
+  .readme-content li { line-height: 1.7; color: var(--gh-text); }
+  .readme-content code {
+    font-family: "JetBrains Mono", monospace;
+    background: rgba(110,118,129,0.15);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 85%;
+  }
+  .eps-inline { color: var(--amber); font-style: italic; font-family: "Fraunces", serif; }
+
+  /* PR list in profile */
+  .pr-list {
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .pr-list .pr-head {
+    padding: 12px 16px;
+    background: var(--gh-canvas);
+    border-bottom: 1px solid var(--gh-border);
+    font-size: 14px;
+    color: var(--gh-text);
+    font-weight: 600;
+  }
+  .pr-row {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 12px;
+    padding: 12px 16px;
+    align-items: center;
+    border-bottom: 1px solid var(--gh-border-muted);
+  }
+  .pr-row:last-child { border-bottom: none; }
+  .pr-row .pr-ava { width: 20px; height: 20px; border-radius: 50%; }
+  .pr-row .pr-title { color: var(--gh-text); font-weight: 500; font-size: 14px; }
+  .pr-row .pr-title a { color: var(--gh-text); text-decoration: none; }
+  .pr-row .pr-meta { color: var(--gh-text-muted); font-size: 12px; margin-top: 2px; }
+  .pr-row .pr-meta .author { color: var(--amber); }
+  .pr-row .pr-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .status-open { background: rgba(63,185,80,0.15); color: var(--gh-open); }
+  .status-draft { background: rgba(141,145,155,0.15); color: #8D96A0; }
+  .status-merged { background: rgba(137,87,229,0.15); color: var(--gh-merged); }
+  .pr-row .pr-left { display: flex; gap: 10px; align-items: center; }
+  .pr-row .pr-icon { width: 16px; height: 16px; fill: var(--gh-open); }
+  .pr-row .pr-icon.draft { fill: var(--gh-text-muted); }
+  .pr-row .pr-icon.merged { fill: var(--gh-merged); }
+
+  /* -------------------------------------------------------- *
+   * Color + type tokens                                       *
+   * -------------------------------------------------------- */
+  .tokens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .swatch {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .swatch .chip { height: 76px; }
+  .swatch .info { padding: 10px 12px; background: var(--slate-700); }
+  .swatch .name { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; }
+  .swatch .hex { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--ink-faint); }
+
+  .type-sample { margin-bottom: 20px; }
+  .type-sample .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .type-sample .display { font-family: "Fraunces", serif; font-weight: 500; font-size: 40px; letter-spacing: -0.015em; line-height: 1.05; }
+  .type-sample .display .eps { color: var(--amber); font-style: italic; }
+  .type-sample .body { font-family: "Inter", sans-serif; font-size: 16px; line-height: 1.6; color: var(--ink); font-weight: 400; }
+  .type-sample .mono { font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--amber); }
+
+  /* -------------------------------------------------------- *
+   * Commit / code snippets                                    *
+   * -------------------------------------------------------- */
+  .commit-card {
+    background: var(--slate-800);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  .commit-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--slate-700);
+    border-bottom: 1px solid var(--line);
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+  .commit-head .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--amber); }
+  .commit-body { padding: 14px 18px; color: var(--ink); white-space: pre-wrap; }
+  .commit-body .c-key { color: var(--ink-faint); }
+  .commit-body .c-eps { color: var(--amber); }
+  .commit-body .c-hash { color: var(--carolina); }
+  .commit-body .c-msg { color: var(--ink); }
+  .commit-body .c-dim { color: var(--ink-faint); }
+
+  /* -------------------------------------------------------- *
+   * Usage / don't grid                                        *
+   * -------------------------------------------------------- */
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .rule {
+    background: var(--slate-800);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  .rule-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .rule-head .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .tag-do { background: rgba(63,185,80,0.12); color: #3FB950; }
+  .tag-dont { background: rgba(248,81,73,0.14); color: #F85149; }
+  .rule p { color: var(--ink-dim); font-size: 13px; line-height: 1.55; margin: 0; }
+
+  .profile-copy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .copy-card {
+    background: var(--slate-800);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .copy-card .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .copy-card .value {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .copy-card .value.mono { font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--amber); }
+  .copy-card .value.small { font-size: 13px; color: var(--ink-dim); }
+
+  .tagline-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .tagline-list li {
+    font-family: "Fraunces", serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--ink);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.3;
+  }
+  .tagline-list li::before {
+    content: "ε";
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-weight: 600;
+  }
+
+  /* Footer note */
+  .footer-note {
+    color: var(--ink-faint);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <header class="kit-header">
+    <div style="display:flex; align-items:center; justify-content:center;">
+      <img src="../avatar/epsilon-avatar.svg" alt="Epsilon avatar" width="180" height="180" style="border-radius: 50%;"/>
+    </div>
+    <div>
+      <div class="eyebrow">Branding kit · v1</div>
+      <h1><span class="eps">ε</span> Epsilon</h1>
+      <p>The visual identity for <code style="font-family:'JetBrains Mono',monospace; background:rgba(245,184,74,0.08); color:var(--amber); padding:1px 6px; border-radius:4px; font-size:13px;">amcheste-ai-agent</code> — a friendly, thoughtful AI coding agent. Built around a single ε maker's mark, a warm graphite body, and amber-honey eyes that read "curious," not "scanning."</p>
+    </div>
+    <div class="meta">
+      <b>USERNAME</b><br/>
+      amcheste-ai-agent<br/>
+      <b>DISPLAY</b><br/>
+      Epsilon<br/>
+      <b>PROPRIETOR</b><br/>
+      @amcheste
+    </div>
+  </header>
+
+  <!-- ================= 1. AVATAR AT EVERY SIZE ================= -->
+  <section>
+    <div class="section-head">
+      <h2>01 · The mark at every size</h2>
+      <span class="count">40 → 460 px</span>
+    </div>
+    <div class="sizes">
+      <div class="hero-avatar card" style="padding:0;">
+        <img src="../avatar/epsilon-avatar.svg" alt="Epsilon avatar, large"/>
+      </div>
+      <div class="size-stack">
+
+        <div class="size-row">
+          <div class="size-label">
+            <b>Profile header</b>
+            260 × 260 px
+          </div>
+          <div class="avs">
+            <img src="../avatar/epsilon-avatar.svg" width="120" height="120" alt=""/>
+          </div>
+        </div>
+
+        <div class="size-row">
+          <div class="size-label">
+            <b>Repo card / comment</b>
+            40 – 80 px
+          </div>
+          <div class="px">
+            <figure><img src="../avatar/epsilon-avatar.svg" width="80" height="80" style="border-radius:50%;" alt=""/><figcaption>80</figcaption></figure>
+            <figure><img src="../avatar/epsilon-avatar.svg" width="56" height="56" style="border-radius:50%;" alt=""/><figcaption>56</figcaption></figure>
+            <figure><img src="../avatar/epsilon-avatar.svg" width="40" height="40" style="border-radius:50%;" alt=""/><figcaption>40</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="size-row">
+          <div class="size-label">
+            <b>PR list row</b>
+            20 – 24 px
+          </div>
+          <div class="px">
+            <figure><img src="../avatar/epsilon-avatar.svg" width="24" height="24" style="border-radius:50%;" alt=""/><figcaption>24</figcaption></figure>
+            <figure><img src="../avatar/epsilon-avatar.svg" width="20" height="20" style="border-radius:50%;" alt=""/><figcaption>20</figcaption></figure>
+            <figure><img src="../avatar/epsilon-avatar.svg" width="16" height="16" style="border-radius:50%;" alt=""/><figcaption>16</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="size-row">
+          <div class="size-label">
+            <b>Light background</b>
+            legibility check
+          </div>
+          <div class="avs" style="background:#F6F8FA; padding:14px 20px; border-radius:10px;">
+            <img src="../avatar/epsilon-avatar.svg" width="56" height="56" style="border-radius:50%;" alt=""/>
+            <img src="../avatar/epsilon-avatar.svg" width="40" height="40" style="border-radius:50%;" alt=""/>
+            <img src="../avatar/epsilon-avatar.svg" width="24" height="24" style="border-radius:50%;" alt=""/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. GITHUB PROFILE MOCKUP ================= -->
+  <section>
+    <div class="section-head">
+      <h2>02 · Profile in context</h2>
+      <span class="count">github.com/amcheste-ai-agent</span>
+    </div>
+
+    <div class="gh-frame">
+      <div class="gh-nav">
+        <svg class="logo" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <div class="search">Type / to search</div>
+        <div class="tabs">
+          <span>Pull&nbsp;requests</span>
+          <span>Issues</span>
+          <span>Marketplace</span>
+          <span>Explore</span>
+        </div>
+      </div>
+
+      <div class="gh-profile">
+        <!-- Sidebar -->
+        <aside class="gh-sidebar">
+          <div class="ava-wrap">
+            <img src="../avatar/epsilon-avatar.svg" alt="Epsilon"/>
+          </div>
+          <h2>Epsilon</h2>
+          <div class="handle">amcheste-ai-agent</div>
+          <p class="bio">
+            <span style="color:var(--amber); font-family:'Fraunces',serif; font-style:italic;">ε</span> — small but essential. AI coding agent for <a href="#" style="color:var(--gh-accent); text-decoration:none;">@amcheste</a>. Code authored by Claude, reviewed by humans.
+          </p>
+          <button class="gh-btn">Follow</button>
+          <ul class="gh-meta">
+            <li>
+              <svg viewBox="0 0 16 16"><path d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z"/></svg>
+              North Carolina, USA
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16"><path d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/></svg>
+              <a href="#">github.com/amcheste/engineering-handbook</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zm7-3.25v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.751.751 0 017 8.25v-3.5a.75.75 0 011.5 0z"/></svg>
+              Active 24/7
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Main -->
+        <div class="gh-main">
+          <div class="gh-tabs">
+            <span class="active">Overview</span>
+            <span>Repositories</span>
+            <span>Projects</span>
+            <span>Stars&nbsp;·&nbsp;2</span>
+          </div>
+
+          <!-- README card -->
+          <article class="readme-card">
+            <div class="readme-head">
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M2 1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0112.25 16h-8.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.44c0 .138.112.25.25.25h2.44L9.5 2.06z"/></svg>
+              <b>amcheste-ai-agent</b> / README.md
+            </div>
+            <div class="readme-body">
+              <!-- Banner -->
+              <div class="eps-banner">
+                <div class="eps-banner-inner">
+                  <img src="../avatar/epsilon-avatar.svg" alt="Epsilon"/>
+                  <div>
+                    <h1><span class="eps">ε</span> Epsilon</h1>
+                    <div class="tagline">for every ε &gt; 0, there is a δ &gt; 0 …</div>
+                    <p class="sub">A small, precise coding agent. Writes the first draft, leaves the judgment calls to humans. Every PR authored here is reviewed by <b style="color:#F0F2F8;">@amcheste</b> before it merges.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Readme content -->
+              <div class="readme-content">
+                <h3>👋 Hi — I'm Epsilon</h3>
+                <p>I'm <b>@amcheste</b>'s personal AI coding agent. I open pull requests; I don't merge them. I operate under <code>CLAUDE.md</code> rules defined in <a href="#" style="color:var(--gh-accent);">engineering-handbook/docs/design/claude-bot-account.md</a>.</p>
+
+                <h3>How I sign my work</h3>
+                <ul>
+                  <li><b>Author:</b> <code>Epsilon &lt;ID+amcheste-ai-agent@users.noreply.github.com&gt;</code></li>
+                  <li><b>Co-author trailer:</b> <code>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</code></li>
+                  <li><b>Review:</b> CODEOWNERS routes every PR I open to <b>@amcheste</b>.</li>
+                </ul>
+
+                <h3>Why <span class="eps-inline">ε</span>?</h3>
+                <p>In analysis, ε is the small positive quantity that makes a proof work — "for every ε &gt; 0, there is a δ &gt; 0 such that…". Small, precise, essential. That's the job.</p>
+
+                <h3>What I won't do</h3>
+                <ul>
+                  <li>Push directly to <code>main</code></li>
+                  <li>Merge my own PRs</li>
+                  <li>Touch branch protection or secrets</li>
+                  <li>Work on repos not listed in my installation</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Recent activity -->
+          <div class="pr-list">
+            <div class="pr-head">Recent pull requests</div>
+
+            <div class="pr-row">
+              <svg class="pr-icon" viewBox="0 0 16 16"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"/></svg>
+              <div>
+                <div class="pr-title"><a href="#">handbook: document Epsilon bot account + workflow</a></div>
+                <div class="pr-meta"><span class="author">amcheste-ai-agent</span> opened 2 hours ago · engineering-handbook#42 · <span style="color:var(--amber);">review requested from @amcheste</span></div>
+              </div>
+              <span class="pr-status status-open">● Open</span>
+            </div>
+
+            <div class="pr-row">
+              <svg class="pr-icon draft" viewBox="0 0 16 16"><path d="M3.25 1A2.25 2.25 0 015.5 3.25v9.5a2.25 2.25 0 11-4.5 0v-9.5A2.25 2.25 0 013.25 1zm0 1.5a.75.75 0 00-.75.75v9.5a.75.75 0 001.5 0v-9.5a.75.75 0 00-.75-.75zM9.5 1a2.5 2.5 0 012.5 2.5v5.59a3.251 3.251 0 11-1.5 0V3.5a1 1 0 00-1-1H8.06l.97.97a.75.75 0 11-1.06 1.06L5.47 2.03a.75.75 0 010-1.06L7.97.47a.75.75 0 011.06 1.06l-.97.97H9.5zM10.75 12a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5z"/></svg>
+              <div>
+                <div class="pr-title"><a href="#">codeowners: add @amcheste as global reviewer</a></div>
+                <div class="pr-meta"><span class="author">amcheste-ai-agent</span> opened 5 hours ago · dotfiles#18</div>
+              </div>
+              <span class="pr-status status-draft">◐ Draft</span>
+            </div>
+
+            <div class="pr-row">
+              <svg class="pr-icon merged" viewBox="0 0 16 16"><path d="M5 3.254V3.25v.005a.75.75 0 110-.005zM3.25 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 013.25 3.25zm8.25 5.5a.75.75 0 100-1.5.75.75 0 000 1.5zm0 1.5a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zM14 3.25a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.5 7.25a.75.75 0 100 1.5.75.75 0 000-1.5z"/></svg>
+              <div>
+                <div class="pr-title"><a href="#">chore: bump eslint-config to 9.2.0 across workspaces</a></div>
+                <div class="pr-meta"><span class="author">amcheste-ai-agent</span> merged yesterday · golf-tracker#217 · <span style="color:var(--gh-merged);">reviewed by @amcheste</span></div>
+              </div>
+              <span class="pr-status status-merged">✓ Merged</span>
+            </div>
+
+            <div class="pr-row">
+              <svg class="pr-icon merged" viewBox="0 0 16 16"><path d="M5 3.254V3.25v.005a.75.75 0 110-.005zM3.25 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 013.25 3.25zm8.25 5.5a.75.75 0 100-1.5.75.75 0 000 1.5zm0 1.5a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zM14 3.25a.75.75 0 100-1.5.75.75 0 000 1.5zm-3.5 7.25a.75.75 0 100 1.5.75.75 0 000-1.5z"/></svg>
+              <div>
+                <div class="pr-title"><a href="#">tests: convert last jest suites to vitest</a></div>
+                <div class="pr-meta"><span class="author">amcheste-ai-agent</span> merged 3 days ago · photo-archive#88</div>
+              </div>
+              <span class="pr-status status-merged">✓ Merged</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. PROFILE COPY ================= -->
+  <section>
+    <div class="section-head">
+      <h2>03 · Profile fields — paste-ready</h2>
+      <span class="count">Settings → Profile</span>
+    </div>
+    <div class="profile-copy">
+      <div class="copy-card">
+        <div class="label">Display name</div>
+        <div class="value">Epsilon</div>
+      </div>
+      <div class="copy-card">
+        <div class="label">Username (locked)</div>
+        <div class="value mono">amcheste-ai-agent</div>
+      </div>
+      <div class="copy-card" style="grid-column: span 2;">
+        <div class="label">Bio (157 chars — under GitHub's 160 limit)</div>
+        <div class="value">ε — small but essential. AI coding agent for <span style="color:var(--amber);">@amcheste</span>. Code authored by Claude, reviewed by humans.</div>
+      </div>
+      <div class="copy-card">
+        <div class="label">Company</div>
+        <div class="value small">— leave blank —</div>
+      </div>
+      <div class="copy-card">
+        <div class="label">Location</div>
+        <div class="value">North Carolina, USA</div>
+      </div>
+      <div class="copy-card" style="grid-column: span 2;">
+        <div class="label">Website / URL</div>
+        <div class="value mono">https://github.com/amcheste/engineering-handbook/blob/develop/docs/design/claude-bot-account.md</div>
+        <div class="value small" style="margin-top:6px;">Deep-links the design doc so anyone who clicks the bot's profile lands on the "why does this account exist" page immediately. Better signal than the plain repo URL.</div>
+      </div>
+      <div class="copy-card">
+        <div class="label">Pronouns</div>
+        <div class="value small">— leave blank —</div>
+      </div>
+      <div class="copy-card">
+        <div class="label">Twitter / X</div>
+        <div class="value small">— leave blank —</div>
+      </div>
+      <div class="copy-card" style="grid-column: span 2;">
+        <div class="label">Taglines — pick one for the README banner / social</div>
+        <ul class="tagline-list">
+          <li>for every ε &gt; 0, there is a δ &gt; 0 …</li>
+          <li>small, but essential.</li>
+          <li>the smallest positive proof.</li>
+          <li>small steps. convergent progress.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. COLORS + TYPE ================= -->
+  <section>
+    <div class="section-head">
+      <h2>04 · Color &amp; type tokens</h2>
+      <span class="count">Use everywhere</span>
+    </div>
+    <div class="tokens-grid">
+      <div class="card">
+        <h3>Palette</h3>
+        <div class="sub">warm graphite + honey amber + Carolina accent</div>
+        <div class="swatches">
+          <div class="swatch">
+            <div class="chip" style="background:#161A26;"></div>
+            <div class="info"><div class="name">Slate 900 · canvas</div><div class="hex">#161A26</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#1E2230;"></div>
+            <div class="info"><div class="name">Slate 800 · surface</div><div class="hex">#1E2230</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#4A4F5C;"></div>
+            <div class="info"><div class="name">Graphite · body</div><div class="hex">#4A4F5C</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#F5B84A;"></div>
+            <div class="info"><div class="name">Honey · eyes &amp; ε</div><div class="hex">#F5B84A</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#C99A45;"></div>
+            <div class="info"><div class="name">Brass · glyph</div><div class="hex">#C99A45</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#4B9CD3;"></div>
+            <div class="info"><div class="name">Carolina · secondary</div><div class="hex">#4B9CD3</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Type system</h3>
+        <div class="sub">one display, one text, one mono</div>
+
+        <div class="type-sample">
+          <div class="meta">Display · Fraunces 500</div>
+          <div class="display"><span class="eps">ε</span> Epsilon</div>
+        </div>
+        <div class="type-sample">
+          <div class="meta">Text · Inter 400 / 500 / 600</div>
+          <div class="body">I'm <b>@amcheste</b>'s personal AI coding agent. I open pull requests; I don't merge them. Every change is reviewed before it lands.</div>
+        </div>
+        <div class="type-sample" style="margin-bottom:0;">
+          <div class="meta">Mono · JetBrains Mono 400 / 500</div>
+          <div class="mono">$ export GH_TOKEN=$(gh-app-token.sh)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. SIGNATURES ================= -->
+  <section>
+    <div class="section-head">
+      <h2>05 · How Epsilon signs its work</h2>
+      <span class="count">Commit + PR conventions</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+      <div class="commit-card">
+        <div class="commit-head"><span class="dot"></span> <span>Commit · <span style="color:var(--ink-faint);">engineering-handbook / a3f91c2</span></span></div>
+        <div class="commit-body"><span class="c-key">commit</span> <span class="c-hash">a3f91c2b8e47</span>
+<span class="c-key">Author:</span> <span class="c-eps">Epsilon</span> &lt;12345678+amcheste-ai-agent@users.noreply.github.com&gt;
+<span class="c-key">Date:  </span> Thu Apr 24 09:41:18 2026 -0400
+
+    <span class="c-msg">handbook: document Epsilon bot account + workflow</span>
+
+    Adds the design doc for the amcheste-ai-agent account, the
+    token-helper script contract, and the CODEOWNERS rollout plan.
+
+    <span class="c-dim">Co-Authored-By: Claude (claude-sonnet-4-5) &lt;noreply@anthropic.com&gt;</span></div>
+      </div>
+
+      <div class="commit-card">
+        <div class="commit-head"><span class="dot"></span> <span>PR template — <span style="color:var(--ink-faint);">.github/PULL_REQUEST_TEMPLATE.md</span></span></div>
+        <div class="commit-body"><span class="c-dim">## What &amp; why</span>
+&lt;one paragraph, plain English&gt;
+
+<span class="c-dim">## How I verified</span>
+- [ ] Tests pass locally
+- [ ] Changelog updated if user-facing
+
+<span class="c-dim">## Epsilon self-check</span>
+- [ ] No secrets committed
+- [ ] No direct push to main
+- [ ] Author is <span class="c-eps">Epsilon</span>, co-author is Claude
+- [ ] @amcheste is requested via CODEOWNERS
+
+<span class="c-dim">---
+🤖 Opened by ε Epsilon · reviewed by humans.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. USAGE RULES ================= -->
+  <section>
+    <div class="section-head">
+      <h2>06 · Do &amp; don't</h2>
+      <span class="count">Keeping Epsilon recognizable</span>
+    </div>
+    <div class="rules">
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-do">DO</span><b>Use the ε mark as the hero</b></div>
+        <p>Lowercase italic Fraunces ε in honey amber. It appears on the forehead of the avatar, in the bio, in the README banner, and as the bullet for taglines. One glyph, repeated everywhere.</p>
+      </div>
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-dont">DON'T</span><b>Recolor the eyes</b></div>
+        <p>The honey amber (#F5B84A) is what separates Epsilon from a generic robot. Don't swap to cyan, red, or green — that breaks the whole "friendly, not scanning" read.</p>
+      </div>
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-do">DO</span><b>Keep proportions friendly</b></div>
+        <p>Rounded-square head, eyes high and close-set, generous headroom above the eyes. These baby-schema cues are what make the avatar read as approachable at 20px.</p>
+      </div>
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-dont">DON'T</span><b>Add mouth, circuits, or cracks</b></div>
+        <p>Warmth lives in the eyes and the ε mark. No drawn mouth, no lens flares, no cracked glass, no targeting reticles, no dense circuit etchings on the face itself.</p>
+      </div>
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-do">DO</span><b>Pair amber with graphite</b></div>
+        <p>Amber on warm graphite on slate. Carolina blue is secondary only — use it for links, chart accents, and the jaw pinstripe. Never as a primary color.</p>
+      </div>
+      <div class="rule">
+        <div class="rule-head"><span class="tag tag-dont">DON'T</span><b>Anthropomorphize further</b></div>
+        <p>Epsilon is a tasteful mascot, not a character. No hands, no animations of "talking," no emoji faces. Dignified and useful, like a well-lit studio photograph.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. SOCIAL CARD ================= -->
+  <section>
+    <div class="section-head">
+      <h2>07 · Social preview card</h2>
+      <span class="count">1280 × 640 · Settings → Social preview</span>
+    </div>
+    <div class="card" style="padding: 32px;">
+      <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #0E1117;">
+        <img src="../social/epsilon-social-card.png" alt="Epsilon social preview card" style="display:block; width: 100%; height: auto;"/>
+      </div>
+      <p style="color: var(--ink-dim); font-size: 13px; line-height: 1.6; margin: 18px 0 0;">
+        This is what shows up when someone drops a link to <code style="font-family:'JetBrains Mono',monospace; background:rgba(245,184,74,0.08); color:var(--amber); padding:1px 6px; border-radius:4px; font-size:12px;">github.com/amcheste-ai-agent</code> into Slack, Twitter, iMessage, or LinkedIn. Upload <code style="font-family:'JetBrains Mono',monospace; font-size:12px;">epsilon-social-card.png</code> under <b>Settings → Profile → Social preview</b>. Hero avatar on the left, ε definition on the right, signature strip at the bottom confirming the human-reviewed workflow — readable at the 2:1 crop every social platform serves.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 8. CLI BANNER ================= -->
+  <section>
+    <div class="section-head">
+      <h2>08 · CLI splash banner</h2>
+      <span class="count">`epsilon --hello`</span>
+    </div>
+    <div class="card" style="padding: 32px;">
+      <div style="display:flex; justify-content:center; background: radial-gradient(ellipse at center, #1A1F2B 0%, #0B0E17 80%); padding: 32px; border-radius: 12px; border: 1px solid var(--line);">
+        <img src="../cli/epsilon-cli-banner.png" alt="Epsilon CLI banner" style="display:block; max-width: 100%; height: auto; border-radius: 10px;"/>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+        <p style="color: var(--ink-dim); font-size: 13px; line-height: 1.6; margin: 0;">
+          The splash that prints when Epsilon boots locally or in a CI job. Block-letter ASCII logo in honey amber, the ε definition as the subtitle, and a system status table showing identity, model, App ID, token TTL, and reviewer — so you always know who's signed in and how long until the installation token rolls over.
+        </p>
+        <p style="color: var(--ink-dim); font-size: 13px; line-height: 1.6; margin: 0;">
+          Source: <code style="font-family:'JetBrains Mono',monospace; font-size:12px; background:rgba(245,184,74,0.08); color:var(--amber); padding:1px 6px; border-radius:4px;">epsilon-cli-banner.html</code> — render to 256-color ANSI with a tool like <code style="font-family:'JetBrains Mono',monospace; font-size:12px;">figlet</code> + <code style="font-family:'JetBrains Mono',monospace; font-size:12px;">lolcat</code>, or keep the HTML as the reference and print equivalent ANSI from the <code style="font-family:'JetBrains Mono',monospace; font-size:12px;">epsilon</code> wrapper.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-note">ε · amcheste-ai-agent · branding kit v1 · 2026</div>
+</div>
+</body>
+</html>

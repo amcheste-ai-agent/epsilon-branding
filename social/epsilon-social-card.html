@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Epsilon — Social Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#0B0E17; }
+  .card {
+    width: 1280px;
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 78% 30%, rgba(245,184,74,0.16) 0%, transparent 45%),
+      radial-gradient(ellipse at 18% 90%, rgba(75,156,211,0.10) 0%, transparent 50%),
+      linear-gradient(135deg, #1C2030 0%, #161A26 55%, #242938 100%);
+    color: #F0F2F8;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  /* Faint math plate texture */
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+    pointer-events: none;
+  }
+  /* Big ghosted ε watermark */
+  .card .watermark {
+    position: absolute;
+    right: -60px;
+    bottom: -140px;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 720px;
+    line-height: 1;
+    color: rgba(245,184,74,0.055);
+    letter-spacing: -0.03em;
+    pointer-events: none;
+  }
+  .inner {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 56px;
+    padding: 72px 88px;
+    align-items: center;
+  }
+  .avatar-wrap {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    box-shadow:
+      0 40px 80px rgba(0,0,0,0.55),
+      0 0 0 1px rgba(245,184,74,0.15),
+      inset 0 0 0 4px rgba(245,184,74,0.08);
+    background: radial-gradient(circle at 50% 45%, #2A3040 0%, #161A26 70%);
+  }
+  .avatar-wrap img { width: 100%; height: 100%; display: block; }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F5B84A;
+    margin-bottom: 22px;
+  }
+  .meta-row .dot { width: 8px; height: 8px; border-radius: 50%; background: #F5B84A; box-shadow: 0 0 12px rgba(245,184,74,0.6); }
+  .meta-row .pipe { width: 1px; height: 14px; background: rgba(245,184,74,0.35); }
+  .meta-row .sub { color: rgba(240,242,248,0.55); letter-spacing: 0.12em; }
+
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 132px;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    margin: 0 0 18px;
+  }
+  h1 .eps { color: #F5B84A; font-style: italic; }
+
+  .handle {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 22px;
+    color: rgba(240,242,248,0.55);
+    margin-bottom: 26px;
+    letter-spacing: 0.01em;
+  }
+  .handle b { color: #F0F2F8; font-weight: 500; }
+
+  .tagline {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #C9CED8;
+    max-width: 640px;
+    margin: 0 0 32px;
+  }
+  .tagline .accent { color: #F5B84A; }
+
+  .footer {
+    position: absolute;
+    left: 88px;
+    right: 88px;
+    bottom: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: rgba(240,242,248,0.45);
+    letter-spacing: 0.08em;
+  }
+  .footer .left b { color: #F0F2F8; font-weight: 500; }
+  .footer .right { color: rgba(245,184,74,0.7); }
+
+  /* Scale down for the kit preview */
+  body.thumbnail { display:flex; align-items:center; justify-content:center; min-height: 100vh; }
+  body.thumbnail .card { transform: scale(var(--s, 1)); transform-origin: top left; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="watermark">ε</div>
+    <div class="inner">
+      <div class="avatar-wrap">
+        <img src="../avatar/epsilon-avatar.svg" alt="Epsilon"/>
+      </div>
+      <div class="copy">
+        <div class="meta-row">
+          <span class="dot"></span>
+          <span>AI Coding Agent</span>
+        </div>
+        <h1><span class="eps">ε</span> Epsilon</h1>
+        <div class="handle">github.com/<b>amcheste-ai-agent</b></div>
+        <p class="tagline">For every <span class="accent">ε &gt; 0</span>, there is a <span class="accent">δ &gt; 0</span> … <br/>Small, precise pull requests. Reviewed by humans.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="left">Authored by <b>Claude</b> &nbsp;·&nbsp; Reviewed by <b>@amcheste</b></div>
+      <div class="right">the smallest positive proof</div>
+    </div>
+  </div>
+</body>
+</html>
