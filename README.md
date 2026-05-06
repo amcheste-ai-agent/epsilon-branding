@@ -4,6 +4,12 @@
 
 <h1 align="center"><em>ε</em> Epsilon</h1>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY%204.0%20%2F%20MIT-F5B84A.svg" alt="License: CC BY 4.0 / MIT" /></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2026.05.0-0B0B0C.svg" alt="Version 2026.05.0" /></a>
+  <a href="https://github.com/amcheste/alanchester-brand"><img src="https://img.shields.io/badge/Family-CAM%20Brand%20System-0B0B0C.svg" alt="Family: CAM Brand System" /></a>
+</p>
+
 <p align="center"><em>small, but essential.</em></p>
 
 ---
