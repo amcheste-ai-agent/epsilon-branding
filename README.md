@@ -14,10 +14,10 @@ Epsilon is the visual identity for [`amcheste-ai-agent`](https://github.com/amch
 a personal AI coding agent built on Claude Code. The agent commits code,
 opens pull requests, and leaves every merge decision to a human reviewer.
 This repo is the canonical source of truth for Epsilon's mark, palette,
-type, profile copy, and social assets — everything that makes Epsilon
+type, profile copy, and social assets. Everything that makes Epsilon
 recognizable at a glance.
 
-The name comes from the ε in analysis — the arbitrarily small positive
+The name comes from the ε in analysis, the arbitrarily small positive
 quantity that makes a proof work. Small, precise, essential. That's the job.
 
 ## Who owns this
@@ -57,7 +57,7 @@ for the full text of both. Attribution required for reuse.
 ## Not a shared logo
 
 Epsilon is one person's personal agent identity. If you're adopting the
-bot-account pattern yourself, create your own mark — don't reuse Epsilon's
+bot-account pattern yourself, create your own mark. Don't reuse Epsilon's
 to represent a different agent. The setup guide at
 [`amcheste-ai-agent/epsilon-agent`](https://github.com/amcheste-ai-agent/epsilon-agent)
 walks through building a fully independent instance.

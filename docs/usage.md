@@ -1,7 +1,7 @@
-# Epsilon — Usage rules
+# Epsilon usage rules
 
 Keep Epsilon recognizable. The avatar reads "friendly, thoughtful coding
-agent" at 20 pixels — that legibility is the whole design, and small
+agent" at 20 pixels. That legibility is the whole design, and small
 deviations break it quickly. Do and don't below.
 
 ## Do
@@ -20,7 +20,7 @@ approachable at 20 px.
 
 ### Pair amber with graphite
 
-Amber on warm graphite on slate. Carolina blue is secondary only — use
+Amber on warm graphite on slate. Carolina blue is secondary only. Use
 it for links, chart accents, and the jaw pinstripe. Never as a primary
 color.
 
@@ -29,7 +29,7 @@ color.
 ### Recolor the eyes
 
 The honey amber (`#F5B84A`) is what separates Epsilon from a generic
-robot. Don't swap to cyan, red, or green — that breaks the whole
+robot. Don't swap to cyan, red, or green. That breaks the whole
 "friendly, not scanning" read.
 
 ### Add mouth, circuits, or cracks
