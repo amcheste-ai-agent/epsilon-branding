@@ -1,4 +1,4 @@
-# Epsilon — Design tokens
+# Epsilon design tokens
 
 One warm graphite canvas, one honey amber accent, one Carolina blue for
 secondary emphasis. One display face, one text face, one mono face.
@@ -16,7 +16,7 @@ Warm graphite + honey amber + Carolina accent.
 | Brass | Glyph accents | `#C99A45` |
 | Carolina | Secondary (links, chart accents, jaw pinstripe) | `#4B9CD3` |
 
-Use amber on warm graphite on slate. Carolina is secondary only — never
+Use amber on warm graphite on slate. Carolina is secondary only, never
 as a primary color.
 
 ## Type system
